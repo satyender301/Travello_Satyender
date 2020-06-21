@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Registration</title>
+    
+</head>
+<body >
+    <div align="center">
+        <h1>Provide Credentials for Registration!!!</h1>
+    <form action="register" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="first_name" placeholder="First Name" required><br><br>
+        <input type="text" name="last_name" placeholder="Last Name" required><br><br>
+        <input type="text" name="username" placeholder="Username" required><br><br>
+        <input type="email" name="email" placeholder="email" required><br><br>
+        <input type="password" name="password1" placeholder="Password" required><br><br>
+        <input type="password" name="password2" placeholder="Confirm Password" required><br><br>
+
+        <input type="Submit" >
+    </form>
+         
+   </div>
+          <div align="center" >
+              
+          {% for message in messages %}
+              <h3>{{ message }}</h3>
+           {% endfor %}
+          </div>
+      
+</body>
+
+
+
+<div align="center" class="col text-center fixed-bottom"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  </a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+        </footer>
+    </div>
+    </div>
+</html>
